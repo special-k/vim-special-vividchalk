@@ -94,12 +94,12 @@ highlight link diffSubname      Comment
 
 call s:hifg("Normal","#EEEEEE","White",87)
 if &background == "light" || has("gui_running")
-    hi Normal guibg=Black ctermbg=Black guifg=#aaffff
+    hi Normal guibg=#001522 ctermbg=Black guifg=#aaffff
 else
     hi Normal guibg=Black ctermbg=NONE
 endif
-highlight StatusLine    guifg=Black   guibg=#aaffff gui=bold ctermfg=Black ctermbg=White  cterm=bold
-highlight StatusLineNC  guifg=Black guibg=#666666 gui=none ctermfg=Black ctermbg=Grey   cterm=none
+highlight StatusLine    guifg=#001222   guibg=#aaffff gui=bold ctermfg=Black ctermbg=White  cterm=bold
+highlight StatusLineNC  guifg=Black guibg=Gray26 gui=none ctermfg=Black ctermbg=Grey   cterm=none
 "if &t_Co == 256
     "highlight StatusLine ctermbg=117
 "else
@@ -111,13 +111,13 @@ highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black cterm
 highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
 highlight CursorLine    guibg=#333333 guifg=NONE
 highlight CursorColumn  guibg=#333333 guifg=NONE
-highlight NonText       guifg=#404040 ctermfg=8
-highlight SpecialKey    guifg=#404040 ctermfg=8
+highlight NonText       guifg=#003366 ctermfg=8
+highlight SpecialKey    guifg=Gray26 ctermfg=8
 highlight Directory     none
 high link Directory     Identifier
 highlight ErrorMsg      guibg=#ff6666 ctermbg=DarkRed guifg=Black ctermfg=NONE
 highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
-call s:hibg("Search"    ,"#003366","DarkBlue",81)
+call s:hibg("Search"    ,"#004499","DarkBlue",81)
 highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
 highlight MoreMsg       guifg=#00ddff ctermfg=Green
 highlight LineNr        guifg=#DDEEFF ctermfg=White
@@ -126,7 +126,8 @@ highlight Question      none
 high link Question      MoreMsg
 highlight Title         guifg=Magenta ctermfg=Magenta
 highlight VisualNOS     gui=none cterm=none
-call s:hibg("Visual"    ,"#555577","LightBlue",83)
+call s:hibg("Visual"    ,"White","LightBlue",83)
+hi Visual guifg=Black
 call s:hibg("VisualNOS" ,"#444444","DarkBlue",81)
 call s:hibg("MatchParen","#0000ff","DarkBlue",18)
 highlight WarningMsg    guifg=#ff6666 ctermfg=Red
@@ -136,6 +137,7 @@ highlight SpellBad      ctermbg=DarkRed
 highlight SpellRare     ctermbg=DarkMagenta
 highlight SpellCap      ctermbg=DarkBlue
 highlight SpellLocal    ctermbg=DarkCyan
+hi VertSplit    gui=BOLD guifg=Black guibg=Gray26
 
 call s:hibg("Folded"    ,"#110077","DarkBlue",17)
 call s:hifg("Folded"    ,"#aaddee","LightCyan",63)
@@ -149,10 +151,10 @@ highlight DiffText      cterm=bold ctermbg=9 gui=bold guibg=#ff6666
 
 highlight Pmenu         guifg=NONE ctermfg=White cterm=bold
 highlight PmenuSel      guifg=#222222 ctermfg=White gui=bold cterm=bold
-call s:hibg("Pmenu"     ,"#222222","Blue",18)
+call s:hibg("Pmenu"     ,"#003366","Blue",18)
 call s:hibg("PmenuSel"  ,"#ddff00","DarkCyan",39)
-highlight PmenuSbar     guibg=#333333 ctermbg=Grey
-highlight PmenuThumb    guifg=#888888 guibg=White ctermbg=White
+highlight PmenuSbar     guibg=#003366 ctermbg=Grey
+highlight PmenuThumb    guifg=#aaffff guibg=White ctermbg=White
 highlight TabLine       gui=underline cterm=underline
 call s:hifg("TabLine"   ,"#bbbbbb","LightGrey",85)
 call s:hibg("TabLine"   ,"#333333","DarkGrey",80)
@@ -177,7 +179,7 @@ call s:hifg("Comment"        ,"#6666bb","DarkMagenta",34) " 92*
 call s:hifg("Constant"       ,"#bbff66","DarkCyan",21) " 30*
 call s:hifg("rubyNumber"     ,"#CCFF33","Yellow",60) " 190*
 call s:hifg("String"         ,"#00bb66","LightGreen",44,82) " 82*
-call s:hifg("Identifier"     ,"#ffdd00","Yellow",72) " 220*
+call s:hifg("Identifier"     ,"#eeee00","Yellow",72) " 220*
 call s:hifg("Statement"      ,"#00ddff","Brown",68) " 202*
 highlight Statement gui=bold
 call s:hifg("PreProc"        ,"#ffffaa","LightCyan",48) " 213*
